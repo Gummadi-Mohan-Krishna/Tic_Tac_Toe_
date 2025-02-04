@@ -13,10 +13,7 @@ let winpattern=[
     [0,4,8],
     [2,4,6]
 ]
-let xt=document.getElementById("btnn")
-console.log(xt)
-
-console.log(xturn)
+let dis=document.getElementById("btn")
 
 boxs.forEach(box =>{
     box.addEventListener("click",()=>{
@@ -30,6 +27,8 @@ boxs.forEach(box =>{
             xturn=true;
             y++;
         }
+        if(x>0|| y>0)
+            dis.style.display="inline";
         box.disabled=true;
         if(x>2 || y>2){
             checkWinner();
